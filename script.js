@@ -5,7 +5,7 @@ const questions = [
             {text: "Shark", correct: false},
             {text: "Blue whale", correct: true},
             {text: "Elephant", correct: false},
-            {text: "Giraffe", correct: false}
+            {text: "Giraffe", correct: false},
         ]
     },
     {
@@ -14,7 +14,7 @@ const questions = [
             {text: "Kalahari", correct: false},
             {text: "Sahara", correct: false},
             {text: "Gobi", correct: false},
-            {text: "Antarctica", correct: true}
+            {text: "Antarctica", correct: true},
         ]
     },
     {
@@ -23,7 +23,7 @@ const questions = [
             {text: "Djibouti", correct: true},
             {text: "Kenya", correct: true},
             {text: "Nigeria", correct: false},
-            {text: "Congo", correct: false}
+            {text: "Congo", correct: false},
         ]
     },
     {
@@ -32,7 +32,7 @@ const questions = [
             {text: "Mombasa", correct: false},
             {text: "Kisumu", correct: false},
             {text: "Nairobi", correct: true},
-            {text: "Nakuru", correct: false}
+            {text: "Nakuru", correct: false},
         ]
     } 
 ];
@@ -41,20 +41,21 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz() {
+function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
 
-function showQuestion() {
+function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
+    let questionNo = currentQuestionIndex  + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
@@ -72,7 +73,7 @@ function showQuestion() {
 function resetState() {
     nextButton.style.display = "none";
     while(answerButtons.firstChild) {
-        answerButtons.remove(answerButtons.firstChild);
+        answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
@@ -118,3 +119,4 @@ nextButton.addEventListener("click", ()=> {
     }
 });
 
+startQuiz();
