@@ -12,27 +12,27 @@ const questions = [
         question: "Which is the largest continent in the world?",
         answers: [
             {text: "Kalahari", correct: false},
-            {text: "Sahara", correct: true},
+            {text: "Sahara", correct: false},
             {text: "Gobi", correct: false},
-            {text: "Antarctica", correct: false}
+            {text: "Antarctica", correct: true}
         ]
     },
     {
-        question: "Which is the smallest continent in the world?",
+        question: "Which is the smallest country in Africa?",
         answers: [
-            {text: "Asia", correct: false},
-            {text: "Artactica", correct: true},
-            {text: "Arctic", correct: false},
-            {text: "Africa", correct: false}
+            {text: "Djibouti", correct: true},
+            {text: "Kenya", correct: true},
+            {text: "Nigeria", correct: false},
+            {text: "Congo", correct: false}
         ]
     },
     {
-        question: "Which is the smallest continent in the world?",
+        question: "Which is the capital city of Kenya?",
         answers: [
-            {text: "Asia", correct: false},
-            {text: "Artactica", correct: true},
-            {text: "Arctic", correct: false},
-            {text: "Africa", correct: false}
+            {text: "Mombasa", correct: false},
+            {text: "Kisumu", correct: false},
+            {text: "Nairobi", correct: true},
+            {text: "Nakuru", correct: false}
         ]
     } 
 ];
